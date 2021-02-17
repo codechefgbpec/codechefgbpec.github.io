@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CodeChef GBPEC Chapter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/logo.png" />
+
+        <!-- tinyslider -->
+        <link rel="stylesheet" href="css/tiny-slider.css" />
+
+        <!-- css -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- colors -->
+        <link href="css/colors/danger.css" rel="stylesheet" type="text/css" id="color-opt" />
+    </head>
+    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="67">
+        <!-- start navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                    <img src="images/logo.png" class="logo-light" alt="" height="60" />
+                    <img src="images/logo.png" class="logo-dark" alt="" height="60" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggle-icon"><i data-feather="menu"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto navbar-center mt-lg-0 mt-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sprint">Day - 5</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end container -->
+        </nav>
+
+        <section class="hero-one-4 d-flex justify-content-center align-items-center overflow-hidden" id="home" style="background-image: url(images/bg.jpg);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 mt-5">
+                        <div class="text-center">
+                            <h5 class="text-uppercase fs-5 position-relative hero-one-4-subtitle">Day - 5</h5>
+                            <div class="clip-text clip-text_one text-uppercase lh-1 fw-bold mb-2" style="font-size: 700%;">hashmaps</div>
+                            <a href="#sprint" class="btn btn-light text-primary fw-medium text-uppercas">Know More <i class="icon-xs" data-feather="chevrons-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end container -->
+        </section>
+        <section class="section" id="sprint">
+            <div class="container">
+                <div class="row">
+                    <div class="justify-content-center" id="main-content">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-alt bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>2021 © CodeChef GBPEC</p>
+                    </div>
+                    <div class="col-sm-6 text-sm-end">
+                        <ul class="list-unstyled footer-alt-list mb-0 mt-sm-0 mt-3">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/CodeChefGBPEC/" target="_blank"> <i class="icon-xs" data-feather="facebook"></i> </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="" target="_blank"> <i class="icon-xs" data-feather="linkedin"></i> </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/codechefgbpec" target="_blank"> <i class="icon-xs" data-feather="github"></i> </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/codechefgbpec/" target="_blank"> <i class="icon-xs" data-feather="instagram"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.4/markdown-it.js" integrity="sha512-/axhvAvhmeYg3oDQVwNJNQbjlVmAm9HWdB1GE9kgQQB2V/xncynHqMpb5aouIRAMzjyMe4cvN4c6ZZWCyA8JJw==" crossorigin="anonymous"></script>
+
+        <!-- feather icon -->
+        <script src="js/feather.js"></script>
+
+        <!-- client-slider -->
+        <script src="js/tiny-slider.js"></script>
+        <script src="js/tiny.init.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            async function getData(url) {
+                try {
+                    let res = await fetch(url);
+                    return await res.text();
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+
+            md = new markdownit();
+            c = getData("https://raw.githubusercontent.com/codechefgbpec/codechefgbpec.github.io/main/hashmap/README.md");
+            c.then(function(text){
+                var result = md.render(text);
+                var mainContent = document.getElementById("main-content");
+                var r = $(`<div>${result}</div>`);
+                $('#main-content').append(r);
+            });
+        </script>
+    </body>
+</html>

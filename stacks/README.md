@@ -1,3 +1,3 @@
 # Stack Data Structure
 
-![image](stack.png)
+### Content Will Be Available on 21 Feb 2021.
