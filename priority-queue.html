@@ -4,6 +4,10 @@
         <meta charset="utf-8" />
         <title>CodeChef GBPEC Chapter</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="CodeChef GBPEC Website">
+        <meta name="keywords" content="algorithms,cp,data-structure,competitive-programming">
+        <meta name="author" content="Codechef GBPEC">
 
         <!-- favicon -->
         <link rel="shortcut icon" href="images/logo.png" />
@@ -94,7 +98,7 @@
             </div>
             <!-- end container -->
         </div>
-
+        <input id="url" type="hidden" value="https://raw.githubusercontent.com/codechefgbpec/codechefgbpec.github.io/main/priority-queue/README.md"/>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.4/markdown-it.js" integrity="sha512-/axhvAvhmeYg3oDQVwNJNQbjlVmAm9HWdB1GE9kgQQB2V/xncynHqMpb5aouIRAMzjyMe4cvN4c6ZZWCyA8JJw==" crossorigin="anonymous"></script>
 
@@ -107,24 +111,6 @@
 
         <script src="js/app.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            async function getData(url) {
-                try {
-                    let res = await fetch(url);
-                    return await res.text();
-                } catch (error) {
-                    console.log(error);
-                }
-            }
-
-            md = new markdownit();
-            c = getData("https://raw.githubusercontent.com/codechefgbpec/codechefgbpec.github.io/main/priority-queue/README.md");
-            c.then(function(text){
-                var result = md.render(text);
-                var mainContent = document.getElementById("main-content");
-                var r = $(`<div>${result}</div>`);
-                $('#main-content').append(r);
-            });
-        </script>
+        <script src="js/custom.js"></script>
     </body>
 </html>

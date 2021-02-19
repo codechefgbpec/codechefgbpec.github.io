@@ -1,14 +1,5 @@
 @charset "UTF-8";
-/* Template Name: Xolcy - Responsive Landing Page Template
-   Author: Themesdesign
-   Version: 1.0.0
-   Created: Jan 2020
-   File Description: Main Css file of the template
-*/
-/**********************
-01.General
 
-***********************/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 body {
   font-family: "Poppins", sans-serif;
@@ -195,6 +186,13 @@ h6 {
 .icon-xl {
   height: 38px;
   width: 38px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .icon-lg {
